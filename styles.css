@@ -1,0 +1,79 @@
+/* Reset & base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #111;
+  padding: 15px;
+  text-align: center;
+}
+
+.logo {
+  font-size: 1.8em;
+  font-weight: 700;
+  color: #00d1b2;
+}
+
+.logo span {
+  color: #fff;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.coming-soon h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+  color: #00d1b2;
+}
+
+.coming-soon p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+#ad-section {
+  margin-top: 40px;
+}
+
+.ad-banner {
+  margin: 15px 0;
+  transition: transform 0.3s ease;
+}
+
+.ad-banner:hover {
+  transform: scale(1.03);
+}
+
+footer {
+  background-color: #111;
+  padding: 15px;
+  text-align: center;
+  font-size: 0.9em;
+  color: #aaa;
+}
+
+#countdown {
+  font-size: 1.5em;
+  color: #ffcc00;
+  margin-top: 10px;
+}

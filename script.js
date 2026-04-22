@@ -1,30 +1,47 @@
-// // Set launch date
-// const launchDate = new Date("2026-01-01T00:00:00").getTime();
-// const countdownEl = document.getElementById("countdown");
-// const yearEl = document.getElementById("year");
+const slidesData = [
+  {
+    title: "<span class='highlight'>CONNECT</span>.<span class='highlight'> CELEBRATE</span>.<br>EXPERIENCE MORE",
+    desc: "Discover <span class='highlight'>Nutritious Meal Plans</span> And Quick Bites Designed To Fit Your Lifestyle, Powered By Calor'ye Hive."
+  },
+  {
+    title: "WEAR YOUR ENERGY.<br>LIVE YOUR <span class='highlight'>STYLE</span>",
+    desc: "From <span class='highlight'>Activewear To Streetwear</span>, Find Pieces That Inspire Confidence — Inside And Out."
+  },
+  {
+    title: "FUEL YOUR BODY WITH <span class='highlight'>SMART, DELICIOUS CHOICES</span>",
+    desc: "Discover <span class='highlight'>Nutritious Meal Plans</span> And Quick Bites — Designed To Fit Your Lifestyle."
+  }
+];
 
-// // Countdown timer
-// const timer = setInterval(() => {
-//   const now = new Date().getTime();
-//   const distance = launchDate - now;
+let current = 0;
 
-//   if (distance <= 0) {
-//     clearInterval(timer);
-//     countdownEl.textContent = "Launched! 🎉";
-//     return;
-//   }
+const slides = document.querySelectorAll(".slide");
+const title = document.getElementById("hero-title");
+const desc = document.getElementById("hero-desc");
+const dotsContainer = document.getElementById("dots");
 
-//   const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-//   const hours = Math.floor(
-//     (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-//   );
-//   const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-//   const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+function updateSlider() {
 
-//   countdownEl.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-// }, 1000);
+  // Update images
+  slides.forEach((slide, i) => {
+    slide.classList.toggle("active", i === current);
+  });
 
-// Dynamically update the year in footer
-document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("year").textContent = new Date().getFullYear();
-});
+  // Update text (IMPORTANT: using innerHTML)
+  title.innerHTML = slidesData[current].title;
+  desc.innerHTML = slidesData[current].desc;
+
+  // Update dots
+  dotsContainer.innerHTML = slidesData.map((_, i) =>
+    `<div class="${i === current ? 'active' : ''}"></div>`
+  ).join("");
+}
+
+// Auto slide
+setInterval(() => {
+  current = (current + 1) % slidesData.length;
+  updateSlider();
+}, 3000);
+
+// Initial load
+updateSlider();

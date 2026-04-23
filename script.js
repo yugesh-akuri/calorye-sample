@@ -1,15 +1,15 @@
 const slidesData = [
   {
     title: "<span class='highlight'>CONNECT</span>.<span class='highlight'> CELEBRATE</span>.<br>EXPERIENCE MORE",
-    desc: "Discover <span class='highlight'>Nutritious Meal Plans</span> And Quick Bites Designed To Fit Your Lifestyle, Powered By Calor'ye Hive."
+    desc: "Discover <span class='highlight'>Nutritious Meal Plans</span> And Quick Bites Designed To Fit Your Lifestyle."
   },
   {
     title: "WEAR YOUR ENERGY.<br>LIVE YOUR <span class='highlight'>STYLE</span>",
-    desc: "From <span class='highlight'>Activewear To Streetwear</span>, Find Pieces That Inspire Confidence — Inside And Out."
+    desc: "From <span class='highlight'>Activewear To Streetwear</span>, Find Pieces That Inspire Confidence."
   },
   {
     title: "FUEL YOUR BODY WITH <span class='highlight'>SMART, DELICIOUS CHOICES</span>",
-    desc: "Discover <span class='highlight'>Nutritious Meal Plans</span> And Quick Bites — Designed To Fit Your Lifestyle."
+    desc: "Discover Nutritious Meal Plans And Quick Bites."
   }
 ];
 
@@ -20,28 +20,33 @@ const title = document.getElementById("hero-title");
 const desc = document.getElementById("hero-desc");
 const dotsContainer = document.getElementById("dots");
 
-function updateSlider() {
+// Create dots once
+slidesData.forEach((_, i) => {
+  const dot = document.createElement("div");
+  if (i === 0) dot.classList.add("active");
+  dotsContainer.appendChild(dot);
+});
 
-  // Update images
+const dots = dotsContainer.querySelectorAll("div");
+
+function updateSlider() {
   slides.forEach((slide, i) => {
     slide.classList.toggle("active", i === current);
   });
 
-  // Update text (IMPORTANT: using innerHTML)
   title.innerHTML = slidesData[current].title;
   desc.innerHTML = slidesData[current].desc;
 
-  // Update dots
-  dotsContainer.innerHTML = slidesData.map((_, i) =>
-    `<div class="${i === current ? 'active' : ''}"></div>`
-  ).join("");
+  dots.forEach((dot, i) => {
+    dot.classList.toggle("active", i === current);
+  });
 }
 
 // Auto slide
 setInterval(() => {
   current = (current + 1) % slidesData.length;
   updateSlider();
-}, 3000);
+}, 4000);
 
 // Initial load
 updateSlider();

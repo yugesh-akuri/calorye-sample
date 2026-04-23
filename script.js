@@ -1,3 +1,13 @@
+// ✅ LOADER
+window.addEventListener("load", () => {
+  const loader = document.getElementById("loader");
+
+  setTimeout(() => {
+    loader.classList.add("hide");
+  }, 1500);
+});
+
+// ✅ SLIDER DATA
 const slidesData = [
   {
     title: "<span class='highlight'>CONNECT</span>.<span class='highlight'> CELEBRATE</span>.<br>EXPERIENCE MORE",
@@ -20,7 +30,7 @@ const title = document.getElementById("hero-title");
 const desc = document.getElementById("hero-desc");
 const dotsContainer = document.getElementById("dots");
 
-// Create dots once
+// ✅ CREATE DOTS ONCE
 slidesData.forEach((_, i) => {
   const dot = document.createElement("div");
   if (i === 0) dot.classList.add("active");
@@ -29,6 +39,7 @@ slidesData.forEach((_, i) => {
 
 const dots = dotsContainer.querySelectorAll("div");
 
+// ✅ UPDATE FUNCTION
 function updateSlider() {
   slides.forEach((slide, i) => {
     slide.classList.toggle("active", i === current);
@@ -42,11 +53,11 @@ function updateSlider() {
   });
 }
 
-// Auto slide
+// ✅ AUTO SLIDE
 setInterval(() => {
   current = (current + 1) % slidesData.length;
   updateSlider();
 }, 4000);
 
-// Initial load
+// INITIAL LOAD
 updateSlider();

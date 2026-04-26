@@ -170,6 +170,12 @@ html, body {
     align-items: flex-end;
   }
 
+  .herodesc{
+    
+   margin-top: 15px;
+    
+  }
+
   .glass-box {
     padding: 20px;
     border-radius: 20px;
@@ -230,5 +236,11 @@ html, body {
 
   .content-row p {
     font-size: 20px;
+  }
+
+   .herodesc{
+    
+   margin-top: 15px;
+    
   }
 }

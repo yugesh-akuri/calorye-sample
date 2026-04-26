@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <!-- PRIMARY SEO -->
+  <!-- ================= PRIMARY SEO ================= -->
   <title>Calor'ye Hive | India’s First Unified Lifestyle Ecosystem</title>
 
   <meta name="description" content="Calor'ye Hive is India’s first unified lifestyle ecosystem for food, fashion, events, appointments and services in one platform." />
@@ -14,25 +15,25 @@
 
   <link rel="canonical" href="https://caloryehive.com/" />
 
-  <!-- OPEN GRAPH (SOCIAL SHARING) -->
+  <!-- ================= SOCIAL SEO ================= -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Calor'ye Hive - Unified Lifestyle Ecosystem" />
   <meta property="og:description" content="India’s first unified lifestyle ecosystem for food, fashion, services & events." />
   <meta property="og:image" content="https://caloryehive.com/images/complogo.png" />
   <meta property="og:url" content="https://caloryehive.com/" />
 
-  <!-- TWITTER -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Calor'ye Hive" />
   <meta name="twitter:description" content="India’s first unified lifestyle ecosystem." />
   <meta name="twitter:image" content="https://caloryehive.com/images/complogo.png" />
 
-  <!-- FAVICON -->
+  <!-- ================= FAVICON ================= -->
   <link rel="icon" href="/images/complogo.png" />
 
+  <!-- ================= CSS ================= -->
   <link rel="stylesheet" href="styles.css" />
 
-  <!-- ================= STRUCTURED DATA ================= -->
+  <!-- ================= STRUCTURED DATA (SEO POWER) ================= -->
 
   <!-- ORGANIZATION -->
   <script type="application/ld+json">
@@ -53,22 +54,17 @@
   }
   </script>
 
-  <!-- WEBSITE ENTITY -->
+  <!-- WEBSITE -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Calor'ye Hive",
-    "url": "https://caloryehive.com/",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://caloryehive.com/?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
+    "url": "https://caloryehive.com/"
   }
   </script>
 
-  <!-- LOCAL BUSINESS SIGNAL (SEO BOOST) -->
+  <!-- LOCAL BUSINESS (SEO BOOST) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -92,7 +88,7 @@
 
 <main>
 
-  <!-- HERO SECTION -->
+  <!-- ================= HERO SECTION ================= -->
   <section class="hero">
 
     <!-- SLIDES -->
@@ -104,17 +100,16 @@
 
     <div class="overlay"></div>
 
-    <!-- CONTENT -->
+    <!-- DYNAMIC HERO CONTENT (IMPORTANT FIX) -->
     <div class="hero-content">
       <div class="glass-box">
 
-        <h1>Calor'ye Hive</h1>
-
-        <p>
-          India’s first unified lifestyle ecosystem for food, fashion, events, appointments and services.
-        </p>
-
+        <!-- ⚠️ IMPORTANT: EMPTY FOR JS CONTROL -->
+        <h1 id="hero-title"></h1>
+        <p id="hero-desc"></p>
+<div class="herodesc">
         <button class="explore-btn">Explore Now →</button>
+        </div>
 
       </div>
     </div>
@@ -124,7 +119,7 @@
 
   </section>
 
-  <!-- SEO CONTENT (IMPORTANT FOR RANKING) -->
+  <!-- ================= SEO CONTENT ================= -->
   <section style="padding:40px; text-align:center;">
     <h2>About Calor'ye Hive</h2>
     <p>
@@ -135,6 +130,7 @@
 
 </main>
 
+<!-- ================= JS ================= -->
 <script src="script.js"></script>
 
 </body>

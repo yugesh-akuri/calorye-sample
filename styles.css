@@ -4,7 +4,15 @@
   box-sizing: border-box;
 }
 
-/* ✅ LOADER */
+/* ================= BASE RESET ================= */
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+}
+
+/* ================= LOADER ================= */
 #loader {
   position: fixed;
   width: 100%;
@@ -33,10 +41,11 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* HERO */
+/* ================= HERO ================= */
 .hero {
   position: relative;
   height: 100vh;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -61,17 +70,22 @@
   background: rgba(0,0,0,0.2);
 }
 
-/* CONTENT */
+/* ================= HERO CONTENT (FIXED BOTTOM ALIGNMENT) ================= */
 .hero-content {
-  position: relative;
-  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
   display: flex;
-  align-items: flex-end;
   justify-content: center;
-  padding: 80px 20px;
+  align-items: flex-end;
+
+  padding: 0 20px 60px;
+  height: 100%;
 }
 
-/* GLASS */
+/* ================= GLASS BOX ================= */
 .glass-box {
   backdrop-filter: blur(8px);
   background: rgba(255,255,255,0.2);
@@ -92,10 +106,12 @@
   color: #FEB14C;
 }
 
+/* ROW */
 .content-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
 }
 
 .content-row p {
@@ -113,6 +129,7 @@
   border-radius: 999px;
   border: none;
   cursor: pointer;
+  white-space: nowrap;
 
   box-shadow: 
     0 8px 20px rgba(254,177,76,0.6),
@@ -120,7 +137,7 @@
     4px 0 15px rgba(254,177,76,0.5);
 }
 
-/* DOTS */
+/* ================= DOTS ================= */
 .dots {
   position: absolute;
   bottom: 20px;
@@ -141,4 +158,77 @@
 
 .dot.active {
   background: white;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+
+  .hero-content {
+    padding: 0 15px 40px;
+    align-items: flex-end;
+  }
+
+  .glass-box {
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .glass-box h1 {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .content-row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .content-row p {
+    font-size: 14px;
+    max-width: 100%;
+  }
+
+  .explore-btn {
+    width: 100%;
+    padding: 14px;
+  }
+
+  .dot {
+    width: 12px;
+    height: 4px;
+  }
+}
+
+/* 📟 TABLET */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .glass-box {
+    padding: 30px;
+  }
+
+  .glass-box h1 {
+    font-size: 34px;
+  }
+
+  .content-row p {
+    font-size: 16px;
+  }
+}
+
+/* 💻 LARGE SCREENS */
+@media (min-width: 1440px) {
+
+  .glass-box {
+    max-width: 1400px;
+  }
+
+  .glass-box h1 {
+    font-size: 52px;
+  }
+
+  .content-row p {
+    font-size: 20px;
+  }
 }

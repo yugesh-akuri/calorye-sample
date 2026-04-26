@@ -123,19 +123,22 @@
 /* DOTS */
 .dots {
   position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 10px;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
 }
 
-.dots div {
-  width: 12px;
+.dot {
   height: 4px;
+  width: 18px;
+  margin: 5px;
+  border-radius: 25%;
+  display: inline-block;
   background: rgba(255,255,255,0.4);
+  cursor: pointer;
 }
 
-.dots .active {
+.dot.active {
   background: white;
 }

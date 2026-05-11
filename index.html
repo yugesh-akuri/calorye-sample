@@ -1,38 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <title>Calor'ye Hive | Lifestyle Brand in India</title>
-  <meta
-    name="description"
-    content="Calor'ye Hive is a lifestyle-focused digital brand in India with an evolving online presence."
-  />
+  <!-- ================= PRIMARY SEO ================= -->
+  <title>Calor'ye Hive | India’s First Unified Lifestyle Ecosystem</title>
+
+  <meta name="description" content="Calor'ye Hive is India’s first unified lifestyle ecosystem for food, fashion, events, appointments and services in one platform." />
+
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="author" content="Calor'ye Hive" />
+
   <link rel="canonical" href="https://caloryehive.com/" />
 
+  <!-- ================= SOCIAL SEO ================= -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Calor'ye Hive | Lifestyle Brand in India" />
-  <meta
-    property="og:description"
-    content="Official online presence of Calor'ye Hive, a lifestyle-focused digital brand in India."
-  />
+  <meta property="og:title" content="Calor'ye Hive - Unified Lifestyle Ecosystem" />
+  <meta property="og:description" content="India’s first unified lifestyle ecosystem for food, fashion, services & events." />
   <meta property="og:image" content="https://caloryehive.com/images/complogo.png" />
   <meta property="og:url" content="https://caloryehive.com/" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Calor'ye Hive" />
-  <meta
-    name="twitter:description"
-    content="Official online presence of Calor'ye Hive."
-  />
+  <meta name="twitter:description" content="India’s first unified lifestyle ecosystem." />
   <meta name="twitter:image" content="https://caloryehive.com/images/complogo.png" />
 
+  <!-- ================= FAVICON ================= -->
   <link rel="icon" href="/images/complogo.png" />
+
+  <!-- ================= CSS ================= -->
   <link rel="stylesheet" href="styles.css" />
 
+  <!-- ================= STRUCTURED DATA (SEO POWER) ================= -->
+
+  <!-- ORGANIZATION -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -40,16 +43,18 @@
     "name": "Calor'ye Hive",
     "url": "https://caloryehive.com/",
     "logo": "https://caloryehive.com/images/complogo.png",
-    "description": "Calor'ye Hive is a lifestyle-focused digital brand in India.",
+    "description": "India’s first unified lifestyle ecosystem for food, fashion, events, appointments and services.",
     "sameAs": [
       "https://www.instagram.com/caloryehive",
       "https://www.linkedin.com/in/calorye-hive-43942537b",
       "https://x.com/caloryehive",
-      "https://youtube.com/@caloryehive"
+      "https://youtube.com/@caloryehive",
+      "https://www.facebook.com/share/1AZMc163sv/"
     ]
   }
   </script>
 
+  <!-- WEBSITE -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -58,65 +63,69 @@
     "url": "https://caloryehive.com/"
   }
   </script>
+
+  <!-- LOCAL BUSINESS (SEO BOOST) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Calor'ye Hive",
+    "url": "https://caloryehive.com/",
+    "image": "https://caloryehive.com/images/complogo.png",
+    "sameAs": [
+      "https://www.instagram.com/caloryehive",
+      "https://www.linkedin.com/in/calorye-hive-43942537b",
+      "https://x.com/caloryehive",
+      "https://youtube.com/@caloryehive",
+      "https://www.facebook.com/share/1AZMc163sv/"
+    ]
+  }
+  </script>
+
 </head>
 
 <body>
-  <main>
 
-    <section class="hero">
-      <div class="slides">
-        <img src="images/Rectangle 2 (1) (1).png" class="slide active" loading="eager" decoding="async" alt="Calor'ye Hive brand visual" />
-        <img src="images/Rectangle 2 (4).png" class="slide" loading="lazy" decoding="async" alt="Calor'ye Hive lifestyle visual" />
-        <img src="images/Rectangle 2 (2) (1).png" class="slide" loading="lazy" decoding="async" alt="Calor'ye Hive digital brand visual" />
-      </div>
+<main>
 
-      <div class="overlay"></div>
+  <!-- ================= HERO SECTION ================= -->
+  <section class="hero">
 
-      <div class="hero-content">
-        <div class="glass-box">
-          <h1>
-            <span class="highlight">CALOR'YE HIVE</span><br>
-            A Modern Lifestyle Brand From India
-          </h1>
+    <!-- SLIDES -->
+    <div class="slides">
+      <img src="images/Rectangle 2 (1) (1).png" class="slide active" loading="eager" decoding="async" alt="Calorye Hive Food" />
+      <img src="images/Rectangle 2 (4).png" class="slide" loading="lazy" decoding="async" alt="Calorye Hive Fashion" />
+      <img src="images/Rectangle 2 (2) (1).png" class="slide" loading="lazy" decoding="async" alt="Calorye Hive Lifestyle" />
+    </div>
 
-          <div class="content-row">
-            <p id="hero-desc">
-              Calor'ye Hive is building a refined digital presence around lifestyle discovery,
-              brand identity, and future-ready experiences.
-            </p>
+    <div class="overlay"></div>
 
-            <div class="herodesc">
-              <a
-                href="https://www.instagram.com/caloryehive"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="explore-btn"
-              >
-                Follow the Brand
-              </a>
-            </div>
-          </div>
+    <!-- DYNAMIC HERO CONTENT (IMPORTANT FIX) -->
+    <div class="hero-content">
+      <div class="glass-box">
+
+        <!-- ⚠️ IMPORTANT: EMPTY FOR JS CONTROL -->
+        <h1 id="hero-title"></h1>
+        <p id="hero-desc"></p>
+<div class="herodesc">
+        <button class="explore-btn">Explore Now →</button>
         </div>
+
       </div>
+    </div>
 
-      <div id="dots" class="dots"></div>
-    </section>
+    <!-- DOTS -->
+    <div id="dots" class="dots"></div>
 
-    <section class="seo-content" style="padding: 48px 20px; max-width: 1100px; margin: 0 auto;">
-      <h2 style="font-size: 28px; margin-bottom: 16px;">About Calor'ye Hive</h2>
-      <p style="font-size: 16px; line-height: 1.8; max-width: 75ch; margin-bottom: 16px;">
-        Calor'ye Hive is the official digital presence of an India-based lifestyle brand.
-        This website introduces the brand in a simple and public-facing way without disclosing
-        internal product flows, technical systems, or business operations.
-      </p>
-      <p style="font-size: 16px; line-height: 1.8; max-width: 75ch;">
-        The current page is intentionally minimal and focused on brand identity, trust,
-        and discoverability across the web.
-      </p>
-    </section>
+  </section>
 
-  </main>
+  <!-- ================= SEO CONTENT ================= -->
+  
 
-  <script src="script.js"></script>
+</main>
+
+<!-- ================= JS ================= -->
+<script src="script.js"></script>
+
 </body>
 </html>
